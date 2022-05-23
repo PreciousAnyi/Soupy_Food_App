@@ -12,6 +12,8 @@ import com.project.soupyfoodapp.model.Food
 class FoodAdapter(val foodList: ArrayList<Food>)
     : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(){
 
+    var onItemClick : ((Food) -> Unit)? = null
+
     class FoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //initializing the views in item_design xml
         val foodName: TextView = itemView.findViewById(R.id.food_name)
@@ -29,6 +31,9 @@ class FoodAdapter(val foodList: ArrayList<Food>)
         holder.foodName.text = food.name
         holder.foodPrice.text = food.price
         holder.imageview.setImageResource(food.image)
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(food)
+        }
     }
 
     override fun getItemCount(): Int {

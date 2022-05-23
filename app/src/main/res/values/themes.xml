@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.SoupyFoodApp" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.SoupyFoodApp" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -20,6 +20,15 @@
         <item name="food_price_color">@color/grey</item>
         <item name="card_background_color">@color/white</item>
 
+
+    </style>
+
+    <style name="Theme.SoupyFoodAppDark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="background_color">@color/black</item>
+        <item name="food_name_color">@color/white</item>
+        <item name="food_price_color">@color/black</item>
+        <item name="card_background_color">@color/orange</item>
 
     </style>
 
