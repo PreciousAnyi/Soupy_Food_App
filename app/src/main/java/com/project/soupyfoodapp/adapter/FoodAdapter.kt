@@ -5,7 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.project.soupyfoodapp.FoodFragmentDirections
 import com.project.soupyfoodapp.R
 import com.project.soupyfoodapp.model.Food
 
@@ -33,6 +36,7 @@ class FoodAdapter(val foodList: ArrayList<Food>)
         holder.imageview.setImageResource(food.image)
         holder.itemView.setOnClickListener{
             onItemClick?.invoke(food)
+
         }
     }
 
