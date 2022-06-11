@@ -1,29 +1,14 @@
 package com.project.soupyfoodapp
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.GridLayout
-import android.widget.Switch
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.project.soupyfoodapp.adapter.FoodAdapter
-import com.project.soupyfoodapp.model.Food
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var foodList: ArrayList<Food>
-
-    private lateinit var recyclerView: RecyclerView
     private lateinit var navController: NavController
 
 

@@ -83,13 +83,13 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
         //setting adapter and recyclerview layout
         foodAdapter = FoodAdapter(foodList)
         chooseLayout()
-        foodAdapter.onItemClick = {
+       /* foodAdapter.onItemClick = {
             findNavController().navigate(R.id.action_foodFragment_to_foodDetailsFragment)
-           /* val intent = Intent(requireContext(), FoodDetailsActivity::class.java)
+           *//* val intent = Intent(requireContext(), FoodDetailsActivity::class.java)
             intent.putExtra("food", it)
-            startActivity(intent)*/
+            startActivity(intent)*//*
 
-        }
+        }*/
     }
 
     override fun onDestroyView() {

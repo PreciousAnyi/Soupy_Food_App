@@ -21,5 +21,14 @@
         tools:layout="@layout/fragment_food_details" >
 
 
+        <argument
+            android:name="food"
+            app:argType="string" />
+        <argument
+            android:name="image"
+            app:argType="integer" />
+        <argument
+            android:name="price"
+            app:argType="string" />
     </fragment>
 </navigation>

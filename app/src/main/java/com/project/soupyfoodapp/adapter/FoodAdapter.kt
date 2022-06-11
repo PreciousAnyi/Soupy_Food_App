@@ -5,8 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.project.soupyfoodapp.FoodFragmentDirections
 import com.project.soupyfoodapp.R
@@ -15,13 +14,13 @@ import com.project.soupyfoodapp.model.Food
 class FoodAdapter(val foodList: ArrayList<Food>)
     : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(){
 
-    var onItemClick : ((Food) -> Unit)? = null
 
-    class FoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
+    class FoodViewHolder(view: View): RecyclerView.ViewHolder(view){
         //initializing the views in item_design xml
-        val foodName: TextView = itemView.findViewById(R.id.food_name)
-        val foodPrice: TextView = itemView.findViewById(R.id.food_price)
-        val imageview: ImageView = itemView.findViewById(R.id.food_image_view)
+        val foodName: TextView = view.findViewById(R.id.food_name)
+        val foodPrice: TextView = view.findViewById(R.id.food_price)
+        val imageview: ImageView = view.findViewById(R.id.food_image_view)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
@@ -35,7 +34,8 @@ class FoodAdapter(val foodList: ArrayList<Food>)
         holder.foodPrice.text = food.price
         holder.imageview.setImageResource(food.image)
         holder.itemView.setOnClickListener{
-            onItemClick?.invoke(food)
+         val action = FoodFragmentDirections.actionFoodFragmentToFoodDetailsFragment(food.name,food.image,food.price)
+            holder.itemView.findNavController().navigate(action)
 
         }
     }
