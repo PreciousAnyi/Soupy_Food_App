@@ -17,7 +17,7 @@ import com.project.soupyfoodapp.model.Food
 
 class FoodDetailsFragment : Fragment() {
 
-    private var _binding: FragmentFoodDetailsBinding? = null !!
+    private var _binding: FragmentFoodDetailsBinding? = null
     private val binding get() = _binding !!
     /*private val args by navArgs<FoodDetailsFragmentArgs>()*/
 
