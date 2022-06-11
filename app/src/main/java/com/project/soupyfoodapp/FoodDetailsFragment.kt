@@ -51,4 +51,9 @@ class FoodDetailsFragment : Fragment() {
             binding.foodDetailsPriceTV.text = price
             binding.foodDetailsIV.setImageResource(image)
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
